@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/clinking-beer-mugs.png");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  height: 40%;
+  width: 60%;
+}
+
+.quiz-box {
+  background-color: $quiz-box;
+  height: 90vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer-box {
+  width: 60%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+@media screen and (max-width: 600px) {
+    .quiz-box {
+      width: 90%;
+      height: 80%;
+    }
+
+    .answer-box {
+      width: 90%;
+      height: 25%;
+    }
+}
