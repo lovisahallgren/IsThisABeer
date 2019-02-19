@@ -7,19 +7,31 @@ const apiKey =
 let query = "&query=beer";
 let limit = "&per_page=100"
 const url = api + apiKey + query + limit;
+const imagebox = document.querySelector('.image-box');
 
 fetch(url)
   .then(response => response.json())
   .then(data => {
    data.results.map(item => {
-     let desc = item.description.toString()
-    //  console.log(desc)
-     let beer ="beer"
-    desc.includes(beer) ? console.log(desc) : null
-   })
-    })
+    let imageUrls = item.urls.small;
 
-console.log("hej")
-fetch(url)
-.then(response => response.json())
-.then(console.log)
+
+    //  let desc = item.description.toString()
+    //  for(let i = 0; i < item.length; i++) {
+      //  console.log(item);
+    //  }
+    //  console.log(desc)
+    //  let beer ="beer"
+    // desc.includes(beer) ? console.log(desc) : null
+  })
+  console.log(data);
+  const image = document.createElement('img');
+
+  image.src = data.results[0].urls.small;
+
+  imagebox.appendChild(image);
+})
+
+
+
+
