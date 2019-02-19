@@ -7,3 +7,7 @@ const api = "https://api.unsplash.com/photos/random";
 let query = "&query=water";
 const url = api + apiKey + query;
 
+console.log("hej")
+fetch(url)
+.then(response => response.json())
+.then(console.log)
